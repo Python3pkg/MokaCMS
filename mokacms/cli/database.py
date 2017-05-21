@@ -46,7 +46,7 @@ class MokaDatabaseController(MokaBaseController):
             self.log.debug("Read JSON data:")
             self.log.debug(data)
 
-            for collection_name, info in data.items():
+            for collection_name, info in list(data.items()):
                 self.log.info("Importing data for collection '{}'"\
                               .format(collection_name))
 
